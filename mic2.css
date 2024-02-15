@@ -242,20 +242,15 @@ hr {
 .bottom {
    background-image: url("assets/blinkingstarsbg.gif"); 
    display: flex;
-   /* flex-direction: column; */
-   justify-content: flex-start;  
-   align-content: center;
-   align-items: flex-end;
-   width: 100%;
-  border: 0px solid red;
-
+   align-items: center;
+   justify-content: center;
 }
 
 
 .donut {
   height: 50vw;
   width: 100vw;
-  align-content: center;
+  justify-content:  center;
 
 }
 
@@ -268,6 +263,7 @@ hr {
   animation-iteration-count: infinite;
   animation-timing-function: steps(15, end);
   transform-origin: center;
+
 }
 
 
