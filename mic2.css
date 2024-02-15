@@ -67,12 +67,15 @@ src: url("assets/korv.woff2") format("woff2");
 /* toggle */
 
 
-
+.togglaren {
+  position: fixed;
+  top: 1vw;
+  left: 1vw;
+}
 
 .toggle-container {
   display: flex;
   align-items: center;
-  margin-top: 20px;
 }
 
 .toggle-checkbox {
@@ -101,7 +104,7 @@ src: url("assets/korv.woff2") format("woff2");
   top: 3px;
   left: 3px;
 
-  transition: left 0.3s;
+  transition: left 0.1s;
 }
 
 .toggle-checkbox:checked + .toggle-label {
@@ -243,25 +246,47 @@ hr {
    justify-content: flex-start;  
    align-content: center;
    align-items: flex-end;
-
+   width: 100%;
+  border: 0px solid red;
 
 }
 
-.donut, .togglaren { width: 100vw;}
 
 .donut {
   height: 50vw;
+  width: 100vw;
+  align-content: center;
+
 }
 
 .donut img {
   margin-top: 20vw;
   z-index: 10000;
-  width: 25vw;
+  width: 30vw;
   animation-name: example;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(15, end);
+  transform-origin: center;
+}
+
+
+@keyframes example {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+.donut img:hover {
+  animation-name: example2;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: steps(15, end);
   transform-origin: center;
+}
+
+@keyframes example2 {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(0deg);}
 }
 
 
@@ -277,6 +302,10 @@ hr {
 
   li {
   font-size: 5vw;
+  }
+
+  .togglaren {
+    display: none;
   }
 
   h1 {
